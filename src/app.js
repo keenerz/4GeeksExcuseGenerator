@@ -6,8 +6,14 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
+  document.querySelector("#button").addEventListener("click", function() {
+    document.querySelector("#excuse").innerHTML = generateExcuse();
+  });
+};
+
+let generateExcuse = function() {
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
-  let action = ["ate", "peed", "crushed", "broke"];
+  let action = ["ate", "peed on", "crushed", "broke"];
   let what = ["my homework", "the keys", "the car"];
   let when = [
     "before the class",
@@ -16,10 +22,19 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  let randomNumber = Math.floor(Math.random() * 10 + 1);
-  console.log(randomNumber);
-  //var excuse= "",
-  //for(let i = 0; i < 4; i++) {
-  //var answer = Math.floor(Math.random()*5)+1;
-  //var
+  let whoIndex = Math.floor(Math.random() * 3);
+  let actionIndex = Math.floor(Math.random() * 3);
+  let whatIndex = Math.floor(Math.random() * 2);
+  let whenIndex = Math.floor(Math.random() * 4);
+
+  let phrase =
+    who[whoIndex] +
+    " " +
+    action[actionIndex] +
+    " " +
+    what[whatIndex] +
+    " " +
+    when[whenIndex];
+
+  return phrase;
 };
