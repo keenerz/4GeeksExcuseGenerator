@@ -16,4 +16,10 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
+  let randomNumber = Math.floor(Math.random() * 10 + 1);
+  console.log(randomNumber);
+  //var excuse= "",
+  //for(let i = 0; i < 4; i++) {
+  //var answer = Math.floor(Math.random()*5)+1;
+  //var
 };
